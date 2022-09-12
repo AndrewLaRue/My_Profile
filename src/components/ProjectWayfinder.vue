@@ -5,7 +5,7 @@
         <span>Wayfinder(Battle Aid)</span>
         <span>
           <a href="https://andrewlarue.github.io/Checkpoint_3_Wayfinder/" title="Go to Wayfinder">
-            <i class="mdi mdi-link"></i>
+            <i class="mdi mdi-link fs-1"></i>
           </a>
         </span>
       </h4>

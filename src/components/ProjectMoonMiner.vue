@@ -8,7 +8,7 @@
         <span>MoonMiner(Deadman Walking)</span>
         <span>
           <a href="https://andrewlarue.github.io/Checkpoint_2_Moonminer/" title="Go to Moon Miner">
-            <i class="mdi mdi-link"></i>
+            <i class="mdi mdi-link fs-1"></i>
           </a>
         </span>
       </h4>

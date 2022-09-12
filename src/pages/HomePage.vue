@@ -30,18 +30,29 @@
         </span>
       </div>
     </div>
+
     <!-- SECTION Projects -->
     <section class="col-md-9">
       <div class="row glass-card">
         <div class="col-md-3">
           <h3 class="text-center">Projects</h3>
           <ul class="list-unstyled no-select fs-5">
-            <li @click="toggle('final')" class="selectable mt-3"><strong>Final</strong>
-              <!-- <p>
-          </p> -->
+
+            <li v-if="project == 'final'" @click="toggle('final')" class="selectable mt-3 active-project text-center">
+              <strong>Final</strong>
             </li>
-            <li @click="toggle('magic')" class="selectable mt-3"><strong>Magic Medley</strong>
-              <!-- <p>
+            <li v-else @click="toggle('final')" class="selectable mt-3">
+              <strong>Final</strong>
+            </li>
+            <!-- <p></p> -->
+
+            <li v-if="project == 'magic'" @click="toggle('magic')" class="selectable mt-3 active-project text-center">
+              <strong>Magic Medley</strong>
+            </li>
+            <li v-else @click="toggle('magic')" class="selectable mt-3">
+              <strong>Magic Medley</strong>
+            </li>
+            <!-- <p>
             App Requirements
             ○ Full-Stack Application
             ○ Auth and Access Control
@@ -74,44 +85,57 @@
             § File Uploading
             § User Roles
           </p> -->
-            </li>
-            <li @click="toggle('tower')" class="selectable mt-3"><strong>Tower</strong>
-              <!-- <p>
-            demonstrate their ability to build full-stack applications independently. For the client, students will implement VueJs
-            with Vue-Router. On the server-side, students will use Express with Node.js and MongoDB with Mongoose to manage their
-            databases and handling relationships of both one to many, and many to many objects. Additionally, students will
-            implement identity management with Auth0.
-          </p> -->
-            </li>
-            <li @click="toggle('network')" class="selectable mt-3"><strong>The Network</strong>
-              <!-- <p>
-            create a client interface that utilizes a social networking API. Students will demonstrate their knowledge of the VueJS
-            framework, creating an SPA application utilizing Vue and Vue-Router, creating searches to the API utilizing query
-            parameters, and working with Auth0 to manage client identity.
-          </p> -->
-            </li>
-            <li @click="toggle('inspire')" class="selectable mt-3 active-project text-center"><strong>Inspire</strong>
 
-            </li>
-            <li @click="toggle('wayfinder')" class="selectable mt-3"><strong>Wayfinder</strong>
 
+            <li v-if="project == 'tower'" @click="toggle('tower')" class="selectable mt-3 active-project text-center">
+              <strong>Tower</strong>
             </li>
-            <li @click="toggle('moon')" class="selectable mt-3"><strong>MoonMiner</strong>
+            <li v-else @click="toggle('tower')" class="selectable mt-3">
+              <strong>Tower</strong>
+            </li>
 
+            <li v-if="project == 'network'" @click="toggle('network')"
+              class="selectable mt-3 active-project text-center">
+              <strong>The Network</strong>
             </li>
-            <li @click="toggle('clone')" class="selectable mt-3"><strong>SiteClone</strong><br>
+            <li v-else @click="toggle('network')" class="selectable mt-3">
+              <strong>The Network</strong>
+            </li>
 
+            <li v-if="project == 'inspire'" @click="toggle('inspire')"
+              class="selectable mt-3 active-project text-center"><strong>Inspire</strong>
             </li>
+            <li v-else @click="toggle('inspire')" class="selectable mt-3">
+              <strong>Inspire</strong>
+            </li>
+
+            <li v-if="project == 'wayfinder'" @click="toggle('wayfinder')"
+              class="selectable mt-3  active-project text-center">
+              <strong>Wayfinder</strong>
+            </li>
+            <li v-else @click="toggle('wayfinder')" class="selectable mt-3"><strong>Wayfinder</strong></li>
+
+            <li v-if="project == 'moon'" @click="toggle('moon')" class="selectable mt-3  active-project text-center">
+              <strong>MoonMiner</strong>
+            </li>
+            <li v-else @click="toggle('moon')" class="selectable mt-3"><strong>MoonMiner</strong></li>
+
+            <li v-if="project == 'clone'" @click="toggle('clone')" class="selectable mt-3  active-project text-center">
+              <strong>SiteClone</strong><br>
+            </li>
+            <li v-else @click="toggle('clone')" class="selectable mt-3"><strong>SiteClone</strong><br></li>
           </ul>
         </div>
-        <!-- <Transition name=""> -->
+
         <div class="col-md-9">
+          <ProjectTower v-if="project == 'tower'" />
+          <ProjectNetwork v-if="project == 'network'" />
           <ProjectInspire v-if="project == 'inspire'" />
+          <ProjectWayfinder v-if="project == 'wayfinder'" />
           <ProjectMoonMiner v-if="project == 'moon'" />
           <ProjectSiteClone v-if="project == 'clone'" />
-          <ProjectWayfinder v-if="project == 'wayfinder'" />
         </div>
-        <!-- </Transition> -->
+
 
 
 
@@ -120,6 +144,7 @@
     </section>
   </div>
 
+  <!-- SECTION about me modal -->
   <div class="modal fade" id="bioModal" tabindex="-1" aria-labelledby="bioModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered text-dark">
       <div class="modal-content">
@@ -143,6 +168,8 @@ import ProjectWayfinder from "../components/ProjectWayfinder.vue";
 import ProjectInspire from "../components/ProjectInspire.vue";
 import { computed } from "vue";
 import { AppState } from '../AppState'
+import ProjectNetwork from '../components/ProjectNetwork.vue'
+import ProjectTower from '../components/ProjectTower.vue'
 export default {
   setup() {
     return {
@@ -156,7 +183,7 @@ export default {
 
     };
   },
-  components: { ProjectSiteClone, ProjectMoonMiner, ProjectWayfinder, ProjectInspire }
+  components: { ProjectSiteClone, ProjectMoonMiner, ProjectWayfinder, ProjectInspire, ProjectNetwork, ProjectTower }
 }
 </script>
 

@@ -8,7 +8,7 @@
         <span>SiteClone</span>
         <span>
           <a href="https://andrewlarue.github.io/Checkpoint_1_Site-Clone/" title="Go to Site Clone">
-            <i class="mdi mdi-link"></i>
+            <i class="mdi mdi-link fs-1"></i>
           </a>
         </span>
       </h4>

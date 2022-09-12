@@ -8,7 +8,7 @@
         <span>Inspire</span>
         <span>
           <a href="https://andrewlarue.github.io/Checkpoint_4_Inspire/" title="Go to Inspire">
-            <i class="mdi mdi-link"></i>
+            <i class="mdi mdi-link fs-1"></i>
           </a>
         </span>
       </h4>
