@@ -1,5 +1,6 @@
 <template>
   <div class="row">
+    <!-- SECTION about me -->
     <div class="col-md-3">
       <div class="glass-card position-relative">
         <img class="img-fluid rounded"
@@ -13,9 +14,6 @@
           Hi, I'm Andrew and I enjoy creating beautiful and performant products with smooth user
           experiences.
         </p>
-
-
-
         <span class="d-flex flex-row fixed-bottom justify-content-around fs-3">
           <a href="https://github.com/AndrewLaRue" title="GitHub">
             <i class="mdi mdi-github"></i>
@@ -32,7 +30,7 @@
         </span>
       </div>
     </div>
-    <!-- FIXME media rule for mobile -->
+    <!-- SECTION Projects -->
     <section class="col-md-9">
       <div class="row glass-card">
         <div class="col-md-3">
