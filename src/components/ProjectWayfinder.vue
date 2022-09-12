@@ -1,6 +1,9 @@
 <template>
   <div class="row">
     <div class="col-12">
+      <img class="img-fluid" src="../assets/img/wayfinder.png" alt="">
+    </div>
+    <div class="col-12">
       <h4 class="d-flex align-items-center justify-content-between">
         <span>Wayfinder(Battle Aid)</span>
         <span>
@@ -9,7 +12,7 @@
           </a>
         </span>
       </h4>
-      <p class="set-height">
+      <p class="set-scroll">
         Demonstrated an ability to build A robust application requiring multiple asynchronous calls to retrieve several
         types of data.<br>
         Successfully utilized multiple services and controllers in order to handle different aspects of data being
@@ -18,9 +21,7 @@
       </p>
 
     </div>
-    <div class="col-12">
-      <img class="img-fluid" src="../assets/img/wayfinder.png" alt="">
-    </div>
+
 
   </div>
 </template>
@@ -36,7 +37,5 @@ export default {
 
 
 <style lang="scss" scoped>
-.set-height {
-  height: 8em;
-}
+
 </style>
