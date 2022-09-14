@@ -99,30 +99,23 @@
 
         <div class="col-md-9 position-relative">
           <Transition>
-
             <ProjectMagic v-if="project == 'magic'" />
           </Transition>
           <Transition>
-
             <ProjectTower v-if="project == 'tower'" />
           </Transition>
           <Transition>
-
             <ProjectNetwork v-if="project == 'network'" />
           </Transition>
           <Transition>
-
             <ProjectInspire v-if="project == 'inspire'" />
           </Transition>
           <Transition>
-
             <ProjectWayfinder v-if="project == 'wayfinder'" />
           </Transition>
           <Transition>
-
             <ProjectMoonMiner v-if="project == 'moon'" />
           </Transition>
-
           <Transition>
             <ProjectSiteClone v-if="project == 'clone'" />
           </Transition>
