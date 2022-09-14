@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row position-absolute">
     <div class="col-6">
       <img class="img-fluid" src="../assets/img/site_clone.png" alt="">
     </div>

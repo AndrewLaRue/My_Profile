@@ -97,14 +97,35 @@
           </ul>
         </div>
 
-        <div class="col-md-9">
-          <ProjectMagic v-if="project == 'magic'" />
-          <ProjectTower v-if="project == 'tower'" />
-          <ProjectNetwork v-if="project == 'network'" />
-          <ProjectInspire v-if="project == 'inspire'" />
-          <ProjectWayfinder v-if="project == 'wayfinder'" />
-          <ProjectMoonMiner v-if="project == 'moon'" />
-          <ProjectSiteClone v-if="project == 'clone'" />
+        <div class="col-md-9 position-relative">
+          <Transition>
+
+            <ProjectMagic v-if="project == 'magic'" />
+          </Transition>
+          <Transition>
+
+            <ProjectTower v-if="project == 'tower'" />
+          </Transition>
+          <Transition>
+
+            <ProjectNetwork v-if="project == 'network'" />
+          </Transition>
+          <Transition>
+
+            <ProjectInspire v-if="project == 'inspire'" />
+          </Transition>
+          <Transition>
+
+            <ProjectWayfinder v-if="project == 'wayfinder'" />
+          </Transition>
+          <Transition>
+
+            <ProjectMoonMiner v-if="project == 'moon'" />
+          </Transition>
+
+          <Transition>
+            <ProjectSiteClone v-if="project == 'clone'" />
+          </Transition>
         </div>
 
 
@@ -188,8 +209,9 @@ button {
   transform: translateY(-20px);
 }
 
-.v-enter-active {
-  transition: opacity .75s ease;
+.v-enter-active,
+.v-leave-active {
+  transition: opacity .75s ease-in-out;
 }
 
 .v-enter-from,

@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row position-absolute">
     <div class="col-12">
       <img class="img-fluid" src="../assets/img/wayfinder.png" alt="">
     </div>
